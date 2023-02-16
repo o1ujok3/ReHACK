@@ -9,14 +9,14 @@ const results = 50;
 function Home(){
     const [showJob, setShowJob] = useState([]);
 
-    useEffect(()=>{
-        fetch('https://api.adzuna.com/v1/api/jobs/gb/search/3?app_id={appID}&app_key={apiKey}&results_per_page={results}&what={title}&where={location}&distance={distance}&salary_min={minSalary}') 
-        .then((res) => res.obj()) 
-        .then((data)=>{
-           setShowJob(data)
-        });
+    // useEffect(()=>{
+    //     fetch(`https://api.adzuna.com/v1/api/jobs/gb/search/3?app_id=${appID}&app_key=${apiKey}&results_per_page=${results}&what=${title}&where=${location}&distance=${distance}&salary_min=${minSalary}`) 
+    //     .then((res) => res.obj()) 
+    //     .then((data)=>{
+    //        setShowJob(data)
+    //     });
 
-    }, [])
+    // }, [])
    
 
     return (
