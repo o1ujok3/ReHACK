@@ -3,9 +3,9 @@ import Footer from "./component/footer";
 import Contact from "./pages/contact";
 import Home from "./pages/home";
 import { Routes, Route } from "react-router-dom";
-
-
-
+import Form from "./component/Form";
+import FormSection from "./component/Form";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 
 function App() {
@@ -20,9 +20,7 @@ function App() {
 
       </Routes>
 
-
-
-       <Footer />
+               <Footer />
     </>
   )
 }
