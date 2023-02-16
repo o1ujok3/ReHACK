@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import {NavLink} from 'react-router-dom';
+import FormSection from "../component/Form";
 
 
 const appID = 'a8f9fe6e';
@@ -21,16 +22,7 @@ function Home(){
 
     return (
         <section className='searchContainer'>
-            <div className='form'>
-               <h1>Job Search</h1>
-               <input type='text' placeholder='Job Title' />
-               <input type='text' placeholder='Location' />
-               <input type='number' placeholder='Distance in Km' />
-               <input type='number' placeholder='Mininum salary' />
-               <button className='btnSearch'>Search</button>      
-
-               <p>If you would like to make contact, click <NavLink className='homeLink' to='/contact'>here</NavLink></p>
-         </div>
+           <FormSection />
            
         </section>
         
