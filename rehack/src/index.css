@@ -87,19 +87,23 @@ footer {
 /*Contact section*/
 .contact {
   background-image: url(./images/HomeBlank.png);
-  height: 100vh;
+  height: 90vh;
   background-repeat: no-repeat;
-  padding: 40px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
   
 
 }
 .contact h1 {
   color: white;
   padding: 10px;
+  text-align: center;
 }
 .contactForm {
   display: flex;
   flex-direction: column;
+  height: 65vh;
   width: 50%;
   padding: 20px;
   background-color:rgba(72, 50, 150, 0.4);

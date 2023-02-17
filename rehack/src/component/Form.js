@@ -5,13 +5,13 @@ import Button from 'react-bootstrap/Button';
 function FormSection() {
   return (
     <Container className="FormContainer">
-      <Form.Control type="text" placeholder="Job title" />
+      <Form.Control type="text" placeholder="Job title" onChange={handleChange} />
       <br />
-      <Form.Control type="text" placeholder="Location" />
+      <Form.Control type="text" placeholder="Location" onChange={handleChange} />
       <br />
       <Form.Select
         aria-label="Default select example"
-        className="Location">
+        className="Location" onChange={handleChange}>
         <option>Location Distance</option>
         <option value="1">3 miles</option>
         <option value="2">5 miles</option>
@@ -22,11 +22,12 @@ function FormSection() {
         
       </Form.Select>
       <br />
-      <Form.Control type="text" placeholder="Salary" />
+      <Form.Control type="text" placeholder="Salary" onChange={handleChange}/>
       <br />
       <Form.Select
         aria-label="Default select example"
         className="Location"
+       
       >
         <option>Job type</option>
         <option value="1">Permanent</option>
@@ -36,7 +37,7 @@ function FormSection() {
         <option value="5">Part-time</option>
       </Form.Select>
       <br />
-      <Button className='btnForm' variant="primary">Find jobs</Button>{' '}
+      <Button className='btnForm' variant="primary" onClick={handleClick}>Find jobs</Button>{' '}
     </Container>
   );
 }
