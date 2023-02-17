@@ -36,7 +36,7 @@ function FormSection() {
         <option value="5">Part-time</option>
       </Form.Select>
       <br />
-      <Button variant="primary">Find jobs</Button>{' '}
+      <Button className='btnForm' variant="primary">Find jobs</Button>{' '}
     </Container>
   );
 }

@@ -11,6 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/*Header Section*/
+nav{
+  height: 100px;
+  background-color: rgb(50, 49, 126);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 20px;
+}
+nav a:hover {
+  color: white;
+}
+
+
+
+
+
+/*Form Section*/
 
 .searchContainer {
   height:100vh;
@@ -19,21 +41,24 @@ code {
   background-repeat: no-repeat;
 }
 
-.contact {
-  background-image: url(./images/HomeBlank.png);
-}
-
-/*Form Section*/
-
- .FormContainer {
-  background-color:white;
-  border-top: solid 5px rgb(14, 14, 154);
-  border-radius: 5px;
+.FormContainer {
+  background-color:rgba(72, 50, 150, 0.4);
+  border-radius: 5px; 
   padding-top: 70px;
   position: absolute ;
   left: 0;
-  width: 200px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px !important;
+  width: 50% !important;
+}
 
+button {
+  background-color: rgb(59, 59, 146) !important;
+}
+button:hover {
+  background-color: rgb(204, 193, 193) !important;
+ 
 }
 
 /*footer section*/
@@ -56,4 +81,56 @@ footer {
 
 .ic a {
   margin: 10px;
+  color: white;
+}
+
+/*Contact section*/
+.contact {
+  background-image: url(./images/HomeBlank.png);
+  height: 100vh;
+  background-repeat: no-repeat;
+  padding: 40px;
+  
+
+}
+.contact h1 {
+  color: white;
+  padding: 10px;
+}
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 20px;
+  background-color:rgba(72, 50, 150, 0.4);
+  border-radius: 5px;
+
+}
+.contactForm input::placeholder{
+  text-align: center;
+}
+.contactForm input {
+  margin: 20px;
+  border: 2px solid aqua;
+  border-radius: 5px;
+}
+.contactForm textarea::placeholder{
+  text-align: center;
+}
+.contactForm textarea{
+  margin: 20px;
+  border-radius: 5px;
+  border: 2px solid aqua;
+
+  
+}
+.contactForm button{
+  margin: 20px;
+  border-radius: 5px;
+  border: 1px solid aqua;
+  background-color: rgb(59, 59, 146) !important;
+  color: white;
+}
+.contactForm button:hover{
+  background-color: rgb(204, 193, 193);
 }
