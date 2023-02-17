@@ -3,8 +3,6 @@ import Footer from "./component/Footer";
 import Contact from "./pages/contact";
 import Home from "./pages/home";
 import { Routes, Route } from "react-router-dom";
-import Form from "./component/Form";
-import FormSection from "./component/Form";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
