@@ -1,6 +1,6 @@
 import { useState } from "react";
 import FormSection from "../component/FormSection";
-
+import Title from "../component/Title";
 
 
 const appID = 'a8f9fe6e';
@@ -27,8 +27,7 @@ function Home(){
         setFormData({
             ...formData, 
             [event.target.name]: event.target.value
-        })
-        
+        })   
     }
      
     const handleClick = ()=>{
@@ -44,22 +43,29 @@ function Home(){
                 salary: ''
             })
            setShowJob(data)
-           console.log(showJob);
+           console.log({
+                title: data.results[0].title,
+                location: data.results[0].location.display_name,
+                description: data.results[0].description,
+                salary: data.results[0].salary_min,
+                created: data.results[0].created,
+                company: data.results[0].company.display_name,
+                contract_type: data.results[0].contract_type,
+                link: data.results[0].redirect_url
+           });
         });
-
     }
    
 
     return (
         <section className='searchContainer'>
+            <Title />
            <FormSection formData={formData} handleChange={handleChange} handleClick={handleClick}/>
            
         </section>
         
     )
 }
-
-
 
 
 export default Home;

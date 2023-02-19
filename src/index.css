@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #0a192f !important;
 }
 
 code {
@@ -12,129 +13,209 @@ code {
     monospace;
 }
 /*Header Section*/
+.navBar{
+  display: flex;
+  justify-content: space-between;
+}
+
 nav{
-  height: 100px;
-  background-color: rgb(50, 49, 126);
+  height: 80px;
+  background-color: #233554;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
+
+.logo{
+  height: 85px;
+  width: 85px;
+}
+
+.navBarLogo{
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
 nav a {
   padding: 10px;
   text-decoration: none;
   font-size: 20px;
+  margin-right: 20px;
+  color: #ccd6f6;
+  transition: color 1s;
+  transition-timing-function: ease;
 }
 nav a:hover {
-  color: white;
+  color: #64ffda;
 }
 
-
-
-
-
 /*Form Section*/
-
 .searchContainer {
-  height:100vh;
-  width: 100%;
-  background-image: url(./images/Home.png);
-  background-repeat: no-repeat;
+  transition: color 1s;
+  transition-timing-function: ease;
+  margin-top: 35px;
 }
 
 .FormContainer {
-  background-color:rgba(72, 50, 150, 0.4);
+  background-color: rgb(240, 240, 240);
   border-radius: 5px; 
-  padding-top: 70px;
-  position: absolute ;
-  left: 0;
+  padding-top: 50px;
+  padding-bottom: 30px;
   display: flex;
   flex-direction: column;
-  margin: 20px !important;
   width: 50% !important;
+  box-shadow: 10px 20px 80px 15px #233554;
 }
 
 button {
-  background-color: rgb(59, 59, 146) !important;
+  background-color: #233554 !important;
+  color: #e6f1ff !important;
+  border: none !important;
+  height: 45px;
 }
+
 button:hover {
-  background-color: rgb(204, 193, 193) !important;
- 
+  background-color: #112240 !important;
+  color: #64ffda !important;
+}
+
+.findJobButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #233554 !important;
+  color: #e6f1ff !important;
+  border: none !important;
+  height: 45px;
+  width: 160px;
+  border-radius: 5px;
+  transition: 1s;
+  transition-timing-function: ease;
+}
+
+.formButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.findJobButton:hover{
+  background-color: #112240 !important;
+  color: #64ffda !important;
+  scale: 110%;
 }
 
 /*footer section*/
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
   margin: auto;
   text-align: center;
-  background-color:none;
+}
+
+footer p{
+  color: #e6f1ff;
 }
 
 .ic {
   display: flex;
   justify-content: center;
-  margin: 10px;
+  margin: 20px
 
 }
 
 .ic a {
-  margin: 10px;
-  color: white;
+  margin: 35px 20px 1px 20px;
+  color: #e6f1ff;
+  transition: 1s;
+  transition-timing-function: ease;
+}
+
+.ic a:hover{
+  color: #64ffda;
+  scale: 120%;
+}
+
+.title{
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 35px;
+}
+
+.title h1{
+  color: #e6f1ff;
+  font-size: 52px;
+}
+
+.title h3{
+  color: #8892b0;
+  font-size: 26px;
 }
 
 /*Contact section*/
-.contact {
-  background-image: url(./images/HomeBlank.png);
-  height: 90vh;
-  background-repeat: no-repeat;
-  padding: 30px;
+.contactForm {
+  width: 60%;
+  padding: 20px;
+  background-color: rgb(240, 240, 240);
+  border-radius: 5px;
+  margin-top: 25px;
+  box-shadow: 10px 20px 80px 15px #233554;
+}
+
+.contactContainer{
   display: flex;
   justify-content: center;
-  
+  align-content: center;
+}
 
-}
-.contact h1 {
-  color: white;
-  padding: 10px;
+.contactTitle h2{
+  color: #e6f1ff;
   text-align: center;
+  margin-top: 25px;
+  font-size: 52px;
 }
-.contactForm {
+
+.contactButtonDiv{
   display: flex;
-  flex-direction: column;
-  height: 65vh;
-  width: 50%;
-  padding: 20px;
-  background-color:rgba(72, 50, 150, 0.4);
-  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
 
-}
-.contactForm input::placeholder{
-  text-align: center;
-}
-.contactForm input {
-  margin: 20px;
-  border: 2px solid aqua;
+.contactButtonDiv .contactButton{
+  background-color: #233554 !important;
+  color: #e6f1ff !important;
+  border: none !important;
+  height: 45px;
+  width: 160px;
   border-radius: 5px;
+  transition: 1s;
+  transition-timing-function: ease;
 }
-.contactForm textarea::placeholder{
-  text-align: center;
-}
-.contactForm textarea{
-  margin: 20px;
-  border-radius: 5px;
-  border: 2px solid aqua;
 
-  
+.contactButton:hover{
+  background-color: #112240 !important;
+  color: #64ffda !important;
+  scale: 110%;
 }
-.contactForm button{
-  margin: 20px;
-  border-radius: 5px;
-  border: 1px solid aqua;
-  background-color: rgb(59, 59, 146) !important;
-  color: white;
+
+/* List Section */
+.listCard{
+  display: flex !important;
+  margin: 0px auto;
+  width: 60%;
+  margin-top: 30px;
 }
-.contactForm button:hover{
-  background-color: rgb(204, 193, 193);
+
+.cardButton{
+ text-decoration: none;
+ margin-top: 20px;
+ background-color: #233554 !important;
+ color: #e6f1ff !important;
+ border: none !important;
+ transition: color 1s;
+ transition-timing-function: ease;
+}
+
+.cardButton:hover {
+  background-color: #112240 !important;
+  color: #64ffda !important;
 }

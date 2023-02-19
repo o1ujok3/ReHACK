@@ -1,7 +1,7 @@
 import Form from "react-bootstrap/Form";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
-import Button from 'react-bootstrap/Button';
+import {NavLink} from 'react-router-dom';
 
 function FormSection({formData, handleChange, handleClick}) {
   return (
@@ -39,8 +39,9 @@ function FormSection({formData, handleChange, handleClick}) {
         <option value="4">Full-time</option>
         <option value="5">Part-time</option>
       </Form.Select> */}
-      <br />
-      <Button className='btnForm' variant="primary" onClick={handleClick}>Find jobs</Button>{' '}
+      <div className="formButton">
+      <NavLink className='link findJobButton btnForm' variant="primary" to='/list' onClick={handleClick}>Find jobs</NavLink>{' '}
+      </div>
     </Container>
   );
 }
