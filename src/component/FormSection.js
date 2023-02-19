@@ -27,18 +27,6 @@ function FormSection({formData, handleChange, handleClick}) {
       <br />
       <Form.Control value={formData.salary}name="salary" type="text" placeholder="Salary" onChange={handleChange}/>
       <br />
-      {/* <Form.Select
-        aria-label="Default select example"
-        className="Location"
-       
-      >
-        <option>Job type</option>
-        <option value="1">Permanent</option>
-        <option value="2">Temporary</option>
-        <option value="3">Contract</option>
-        <option value="4">Full-time</option>
-        <option value="5">Part-time</option>
-      </Form.Select> */}
       <div className="formButton">
       <NavLink className='link findJobButton btnForm' variant="primary" to='/list' onClick={handleClick}>Find jobs</NavLink>{' '}
       </div>
