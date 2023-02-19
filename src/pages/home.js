@@ -16,11 +16,6 @@ function Home(){
     });
 
     const [showJob, setShowJob] = useState([]);
-    // const [getTitle, setTitle] = useState('');
-    // const [getLocation, setLocation] = useState('');
-    // const [getDistance, setDistance] = useState();
-    // const [getSalary, setSalary] = useState();
-    // //const [getContract, setContract] = useState('');
      
      
     const handleChange = (event)=>{

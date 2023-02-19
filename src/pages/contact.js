@@ -6,10 +6,13 @@ import { useState } from "react";
 
 function Contact() {
 
+    const [success, setSuccess] = useState(false);
+   
     const [ContactData, setContactData] = useState({
         name: '',
         email: '',
-        message: ''
+        message: '',
+        access_key:'d574540e-45f0-4a98-a6c0-16b1d6568819'
     })
 
     const handleChange = (event) => {
@@ -19,11 +22,37 @@ function Contact() {
         });
     };
     const handleSubmit = (event) => {
-        event.preventDefault();
+        event.preventDefault(); 
+        
+   
+    const data = JSON.stringify(ContactData);
+    
 
-        console.log(ContactData);
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: data
+        }) 
+            .then(res => res.json())
+            .then(data => {
+                setSuccess (true);
+                setContactData({
+                    ...ContactData,
+                    name: '',
+                    email: '',
+                    message: ''
+                })
+            
+                setTimeout(()=> {
+                    setSuccess(false);
+                }, 3000); 
 
-    };
+                  });
+
+                      };
 
     return (
         <div>
@@ -33,22 +62,23 @@ function Contact() {
                     className="contactForm">
                     <Form.Group
                         className="mb-4" controlId="exampleForm.ControlInput1">
-                        <Form.Control
-                            className="mb-4 mt-2"
+                        <Form.Control className="mb-4 mt-2"  type="text"
+                            value={ContactData.name}
                             name="name"
                             onChange={handleChange}
-                            type="text"
                             placeholder="Your Name" />
-                        <Form.Control className="mb-3"
+
+                        <Form.Control className="mb-3 mt-2"  type="text"
+                            value={ContactData.email}
                             name="email"
                             onChange={handleChange}
-                            type="text"
                             placeholder="Your Email" />
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                    <Form.Group className="mb-3 mt-2" controlId="exampleForm.ControlTextarea1">
                         <Form.Label>Your Message</Form.Label>
                         <Form.Control
+                            value={ContactData.message}
                             name="message"
                             onChange={handleChange}
                             as="textarea" rows={3} />
@@ -58,9 +88,15 @@ function Contact() {
                         <Button className="contactButton"
                         onClick={handleSubmit}>Send</Button>
                     </div>
+
+                    {success && <p className="mb-3 mt-2 success"> Message sent successfully! </p>}
                 </Form>
+               
             </Container>
+           
+          
         </div>
+
     );
 }
 
