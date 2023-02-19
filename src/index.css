@@ -219,3 +219,10 @@ footer p{
   background-color: #112240 !important;
   color: #64ffda !important;
 }
+
+.success {
+  text-align: center !important;
+  color: #112240 !important;
+  margin-top: 15px;
+  
+}
