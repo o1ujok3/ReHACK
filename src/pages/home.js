@@ -1,66 +1,78 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import FormSection from "../component/FormSection";
 import Title from "../component/Title";
+import useJobList from "../context/jobList";
+import Loading from "../component/Loading";
 
 
-const appID = 'a8f9fe6e';
-const apiKey = '11fc5d63edb90973a7a0aa1591f16b27';
+const appID = "a8f9fe6e";
+const apiKey = "11fc5d63edb90973a7a0aa1591f16b27";
 const results = 50;
 
-function Home(){
-    const [formData, setFormData] = useState({
-        title: '',
-        location: '',
-        distance: '',
-        salary: ''
+function Home() {
+  const { data, isLoading, error, dispatch } = useJobList();
+  const navigate = useNavigate();
+  console.log({ data, isLoading, error });
+
+  const [formData, setFormData] = useState({
+    title: "",
+    location: "",
+    distance: "",
+    salary: "",
+  });
+
+  const handleChange = (event) => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleClick = () => {
+    // Loading => True
+    dispatch({
+      type: "JOB_LIST_REQUEST",
     });
 
-    const [showJob, setShowJob] = useState([]);
-     
-     
-    const handleChange = (event)=>{
-        setFormData({
-            ...formData, 
-            [event.target.name]: event.target.value
-        })   
-    }
-     
-    const handleClick = ()=>{
-        
-        fetch(`https://api.adzuna.com/v1/api/jobs/gb/search/3?app_id=${appID}&app_key=${apiKey}&results_per_page=${results}&what=${formData.title}&where=${formData.location}&distance=${formData.distance}&salary_min=${formData.salary}`) 
-        .then((res) => res.json()) 
-        .then((data)=>{
-           console.log(data);
-            setFormData({
-                title: '',
-                location: '',
-                distance: '',
-                salary: ''
-            })
-           setShowJob(data)
-           console.log({
-                title: data.results[0].title,
-                location: data.results[0].location.display_name,
-                description: data.results[0].description,
-                salary: data.results[0].salary_min,
-                created: data.results[0].created,
-                company: data.results[0].company.display_name,
-                contract_type: data.results[0].contract_type,
-                link: data.results[0].redirect_url
-           });
-        });
-    }
-   
-
-    return (
-        <section className='searchContainer'>
-            <Title />
-           <FormSection formData={formData} handleChange={handleChange} handleClick={handleClick}/>
-           
-        </section>
-        
+    fetch(
+      `https://api.adzuna.com/v1/api/jobs/gb/search/3?app_id=${appID}&app_key=${apiKey}&results_per_page=${results}&what=${formData.title}&where=${formData.location}&distance=${formData.distance}&salary_min=${formData.salary}`
     )
-}
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data, "data");
+        // set the data =>
+        console.log(data);
 
+        dispatch({
+          type: "JOB_LIST_SUCCESS",
+          payload: {
+            data: data.results,
+          },
+        });
+
+        navigate("/list");
+
+        setFormData({
+          title: "",
+          location: "",
+          distance: "",
+          salary: "",
+        });
+      });
+  };
+
+  return (
+    <section className="searchContainer">
+      {isLoading && <Loading />}
+      <Title />
+      <FormSection
+        formData={formData}
+        handleChange={handleChange}
+        handleClick={handleClick}
+      />
+    </section>
+  );
+}
 
 export default Home;

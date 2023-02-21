@@ -2,34 +2,70 @@ import Card from "react-bootstrap/Card";
 import Accordion from "react-bootstrap/Accordion";
 import Container from "react-bootstrap/Container";
 import { Button } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faSterlingSign,
+  faBriefcase,
+  faLocationDot,
+} from "@fortawesome/free-solid-svg-icons";
+import useJobList from "../context/jobList";
 
 function List() {
+  const { data } = useJobList();
+
+  console.log(data, "data");
+
+  
+
   return (
     <div>
       <Container>
-        <Card className="listCard">
-          <Card.Body>
-            <Card.Title className="cardTitle mb-3">
-                <h2>title</h2></Card.Title>
-            <Card.Subtitle className="mb-3 text-muted">
-              created by company.display_name
-            </Card.Subtitle>
-            <Card.Text>£ salary_min</Card.Text>
-            <Card.Text>contract_type</Card.Text>
-            <Card.Text>
-              location.display_name
-            </Card.Text>
-            <Accordion className="mt-4">
-              <Accordion.Item eventKey="0">
-                <Accordion.Header>See more</Accordion.Header>
-                <Accordion.Body>
-                  description
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
-            <Button className="cardButton" href="#">Apply now</Button>
-          </Card.Body>
-        </Card>
+        {data.map((item, index) => {
+            const salary = Math.floor(item.salary_min).toLocaleString('en-US', {minimumFractionDigits: 0});
+
+            const contractType = item.contract_type;
+            const contractTime = item.contract_time;
+            
+
+          return (
+            <Card className="listCard" key={index}>
+              <Card.Body>
+                <Card.Title className="cardTitle mb-3">
+                  <h2>{item.title}</h2>
+                </Card.Title>
+                <Card.Subtitle className="mb-3 text-muted">
+                  {item.company.display_name}
+                </Card.Subtitle>
+                <div className="cardTextIcons">
+                  <Card.Text className="cardTextInfo">
+                    <FontAwesomeIcon size="1x" icon={faSterlingSign} />
+                    <p>{salary} per annum</p>
+                  </Card.Text>
+                  <Card.Text className="cardTextInfo">
+                    <FontAwesomeIcon size="1x" icon={faBriefcase} />
+                    <p>{contractType ? contractType : contractTime}</p>
+                  </Card.Text>
+                  <Card.Text className="cardTextInfo">
+                    <FontAwesomeIcon size="1x" icon={faLocationDot} />
+                    <p>{item.location.display_name}</p>
+                  </Card.Text>
+                  <Card.Text></Card.Text> 
+                </div>
+                <Accordion className="mt-3">
+                  <Accordion.Item eventKey="0">
+                    <Accordion.Header>See more</Accordion.Header>
+                    <Accordion.Body>{item.description}</Accordion.Body>
+                  </Accordion.Item>
+                </Accordion>
+                <div className="cardButtonSection">
+                  <Button className="cardButton" target="_blank" href={item.redirect_url}>
+                    Apply now
+                  </Button>
+                </div>
+              </Card.Body>
+            </Card>
+          );
+        })}
       </Container>
     </div>
   );

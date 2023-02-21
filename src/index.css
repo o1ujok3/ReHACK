@@ -197,6 +197,13 @@ footer p{
   scale: 110%;
 }
 
+.success {
+  text-align: center !important;
+  color: #112240 !important;
+  margin-top: 15px;
+  
+}
+
 /* List Section */
 .listCard{
   display: flex !important;
@@ -205,24 +212,52 @@ footer p{
   margin-top: 30px;
 }
 
-.cardButton{
+.cardButtonSection{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  transition-timing-function: ease;
+}
+
+.cardButton {
  text-decoration: none;
  margin-top: 20px;
  background-color: #233554 !important;
  color: #e6f1ff !important;
  border: none !important;
- transition: color 1s;
+ transition: 1s;
  transition-timing-function: ease;
 }
 
 .cardButton:hover {
   background-color: #112240 !important;
   color: #64ffda !important;
+  scale: 110%;
 }
 
-.success {
-  text-align: center !important;
-  color: #112240 !important;
-  margin-top: 15px;
-  
+.cardTextIcons{
+  display: flex;
+  align-content:center;
+  align-items: center;
+}
+
+.cardTextInfo{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-top: 12px;
+}
+
+.cardTextInfo p{
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  margin-left: 10px;
+  margin-right: 40px;
+}
+
+.loadingSpinner{
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
