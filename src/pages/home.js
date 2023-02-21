@@ -5,7 +5,6 @@ import Title from "../component/Title";
 import useJobList from "../context/jobList";
 import Loading from "../component/Loading";
 
-
 const appID = "a8f9fe6e";
 const apiKey = "11fc5d63edb90973a7a0aa1591f16b27";
 const results = 50;
@@ -31,6 +30,15 @@ function Home() {
 
   const handleClick = () => {
     // Loading => True
+
+    if (
+      !formData.distance ||
+      !formData.salary ||
+      !formData.location ||
+      !formData.title
+    )
+      return alert("Please complete all sections");
+
     dispatch({
       type: "JOB_LIST_REQUEST",
     });
