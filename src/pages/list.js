@@ -41,15 +41,16 @@ function List() {
                     <FontAwesomeIcon size="1x" icon={faSterlingSign} />
                     <p>{salary} per annum</p>
                   </Card.Text>
-                  <Card.Text className="cardTextInfo">
-                    <FontAwesomeIcon size="1x" icon={faBriefcase} />
-                    <p>{contractType ? contractType : contractTime}</p>
-                  </Card.Text>
+                  {(contractType || contractTime) && (
+                    <Card.Text className="cardTextInfo">
+                      <FontAwesomeIcon size="1x" icon={faBriefcase} />
+                      <p>{contractType ? contractType : contractTime}</p>
+                    </Card.Text>
+                  )}
                   <Card.Text className="cardTextInfo">
                     <FontAwesomeIcon size="1x" icon={faLocationDot} />
                     <p>{item.location.display_name}</p>
                   </Card.Text>
-                  <Card.Text></Card.Text> 
                 </div>
                 <Accordion className="mt-3">
                   <Accordion.Item eventKey="0">

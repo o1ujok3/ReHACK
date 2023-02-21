@@ -211,7 +211,6 @@ footer p{
   width: 60%;
   margin-top: 30px;
 }
-
 .cardButtonSection{
   display: flex;
   justify-content: center;
@@ -219,43 +218,41 @@ footer p{
   transition: 1s;
   transition-timing-function: ease;
 }
-
 .cardButton {
  text-decoration: none;
  margin-top: 20px;
  background-color: #233554 !important;
- color: #e6f1ff !important;
+ color: #E6F1FF !important;
  border: none !important;
  transition: 1s;
  transition-timing-function: ease;
 }
-
 .cardButton:hover {
   background-color: #112240 !important;
-  color: #64ffda !important;
+  color: #64FFDA !important;
   scale: 110%;
 }
-
 .cardTextIcons{
   display: flex;
   align-content:center;
   align-items: center;
 }
-
 .cardTextInfo{
   display: flex;
   align-items: center;
   align-content: center;
-  margin-top: 12px;
+  margin-bottom: 10px;
 }
-
 .cardTextInfo p{
+  margin-top: 0px;
   margin-bottom: 0px;
   padding-bottom: 0px;
   margin-left: 10px;
   margin-right: 40px;
 }
-
+.card-text:last-child {
+  margin-bottom: 10px !important;
+}
 .loadingSpinner{
   display: flex;
   justify-content: center;
