@@ -41,7 +41,7 @@ function FormSection({ formData, handleChange, handleClick }) {
         value={formData.salary}
         name="salary"
         type="text"
-        placeholder="Salary"
+        placeholder="Minimum salary"
         onChange={handleChange}
       />
       <br />
