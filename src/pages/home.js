@@ -12,7 +12,7 @@ const results = 50;
 function Home() {
   const { data, isLoading, error, dispatch } = useJobList();
   const navigate = useNavigate();
-  console.log({ data, isLoading, error });
+  
 
   const [formData, setFormData] = useState({
     title: "",
@@ -48,9 +48,8 @@ function Home() {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data, "data");
+        
         // set the data =>
-        console.log(data);
 
         dispatch({
           type: "JOB_LIST_SUCCESS",

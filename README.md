@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# ReHack Recruitment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description
 
-## Available Scripts
+This job recruitment agency is dedicated to helping individuals find their desired job based on their unique criteria. Individuals will have to highlight their job title, the location in which the job is situated and their desired salary. By partnering with this agency, job seekers gain access to a broad range of job opportunities and find the perfect job that meets their criteria. It was created using `react` framework and `node.js` library, two third-party APIs, `bootstrap` and `font-awesome` packages. The app was deployed using Netlify. 
 
-In the project directory, you can run:
+There is a contact session in the website for the user to contact the ReHack Recruitment Agency directly.
 
-### `npm start`
+[Link to deployed app](https://startling-zuccutto-a47cd8.netlify.app/)
+[Link to the GitHub Repository](https://github.com/o1ujok3/ReHACK.git)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+### Authors
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The following people authored this project and the links to their GitHub pages.
 
-### `npm run build`
+*   [Ifeoma - ify-jas](https://github.com/Ify-Jas)
+*   [Mercy - MercyAz ](https://github.com/MercyAz)
+*   [Olujoke - o1ujok3](https://github.com/o1ujok3)
+*   [Ozgun - OzgunEfe](https://github.com/OzgunEfe)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Screenshot of Project
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Landing/Home page:
+![Home Page](/src/images/screenshot_2023-02-22_at_18.14.13_720.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Job Search Demonstration:
+![Job Search demonstration](/src/images/screenshot_2023-02-22_at_18.14.46_720.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Results page:
+![Results page](/src/images/screenshot_2023-02-22_at_18.15.42_720.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Contact page:
+![Contact Page](/src/images/screenshot_2023-02-22_at_18.16.10_720.png)
 
-## Learn More
+#### Success message:
+![Success message](/src/images/screenshot_2023-02-22_at_19.20.22_720.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### Installation
+This web application does not require prior installation, it runs on most browsers and is mobile friendly.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Usage
 
-### Analyzing the Bundle Size
+It is free and does not require payment.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Credits
 
-### Making a Progressive Web App
+N/A
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contact
 
-### Advanced Configuration
+[Website](https://startling-zuccutto-a47cd8.netlify.app/)
+Email address: services.rehackrecruitments@gmail.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### License
+N/A
