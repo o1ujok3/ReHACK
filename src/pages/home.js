@@ -10,9 +10,8 @@ const apiKey = "11fc5d63edb90973a7a0aa1591f16b27";
 const results = 50;
 
 function Home() {
-  const { data, isLoading, error, dispatch } = useJobList();
+  const { isLoading, dispatch } = useJobList();
   const navigate = useNavigate();
-  
 
   const [formData, setFormData] = useState({
     title: "",
@@ -48,7 +47,6 @@ function Home() {
     )
       .then((res) => res.json())
       .then((data) => {
-        
         // set the data =>
 
         dispatch({
