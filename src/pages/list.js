@@ -13,7 +13,6 @@ import useJobList from "../context/jobList";
 function List() {
   const { data } = useJobList();
 
-  console.log(data, "data");
 
   
 
